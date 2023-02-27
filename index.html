@@ -6,122 +6,351 @@
   <link href="dist/output.css" rel="stylesheet">
 </head>
 <body>
-    
-    <div class="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-5 gap-2">
-        <div class="min-w-max rounded-lg ring-1 ring-gray-200 shadow-md p-6 m-4">
-            <div class="text-3xl font-bold text-center">
-                <select class="appearance-none">
-                    <option value="N">New Construction</option>
-                    <option value="M">Major Renovation</option>
-                    <option value="S">Store Renovation</option>
-                </select>
-            </div>
-
-            <form class="mt-4">
-                <div class="flex flex-col gap-y-2">
-                    <div>
-                        <label for="" class="text-sm">Building Area</label>
-                        <input type="number" 
-                            class="block rounded-md focus:outline-none shadow-sm
-                                font-bold
-                                ring-1 ring-inset ring-gray-200 focus:ring focus:ring-emerald-600
-                                w-full px-3 py-2 mt-1">
+    <div class="flex">
+        <div class="grow 
+            grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 gap-2
+            h-screen p-2
+            overflow-auto">
+            <div>
+                <div class="rounded-t-lg ring-1 ring-inset ring-gray-200 shadow-md p-4">
+                    <div class="text-2xl font-semibold text-center">
+                        <select class="appearance-none">
+                            <option value="N">New Construction</option>
+                            <option value="M">Major Renovation</option>
+                            <option value="S">Store Renovation</option>
+                        </select>
                     </div>
-                    <div>
-                        <label for="" class="text-sm">Site Area</label>
-                        <input type="number" 
-                            class="block rounded-md focus:outline-none shadow-sm
-                                font-bold
-                                ring-1 ring-inset ring-gray-200 focus:ring focus:ring-emerald-600
-                                w-full px-3 py-2 mt-1">
-                    </div>
-                    <div>
-                        <label for="" class="text-sm">Weeks</label>
-                        <input type="number" 
-                            class="block rounded-md focus:outline-none shadow-sm
-                                font-bold
-                                ring-1 ring-inset ring-gray-200 focus:ring focus:ring-emerald-600
-                                w-full px-3 py-2 mt-1">
-                    </div>
-                    <div class="flex items-center">
+        
+                    <div class="flex flex-col gap-y-1 mt-4 text-sm font-semibold ">
+                        <div class="flex justify-between items-center">
+                            <label for="building-area">Building Area</label>
+                            <input type="number" id="building-area"
+                                class="rounded-md shadow-sm
+                                    w-32 px-2 py-1 mt-1
+                                    ring-1 ring-inset ring-gray-200 
+                                    focus:outline-none focus:ring-1 focus:ring-emerald-600">
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <label for="site-area">Site Area</label>
+                            <input type="number" id="site-area"
+                                class="rounded-md shadow-sm
+                                    w-32 px-2 py-1 mt-1
+                                    ring-1 ring-inset ring-gray-200 
+                                    focus:outline-none focus:ring-1 focus:ring-emerald-600">
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <label for="weeks">Weeks</label>
+                            <input type="number" id="weeks"
+                                class="rounded-md shadow-sm
+                                    w-32 px-2 py-1 mt-1
+                                    ring-1 ring-inset ring-gray-200 
+                                    focus:outline-none focus:ring-1 focus:ring-emerald-600">
+                        </div>
+                        <div class="mt-1 flex items-center justify-end">
                             <input type="checkbox" id="contract" class="w-4 h-4 accent-emerald-600"> 
                             <label for="contract" class="ml-2">All Contract</label>
-                    </div>
-
-                </div>
-            </form>
-            <div class="mt-4 grid grid-cols-1 gap-y-2">
-    
-                <div class="flex justify-between text-sm font-bold">
-                    <div>Support</div>
-                    <div>₩ 42,480,000</div>
-                </div>
-    
-                <div class="text-sm">
-                    <div class="flex justify-between font-bold">
-                        <div>Contract(MIN)</div>
-                        <div>₩ 42,480,000</div>
-                    </div>
-                    <div class="flex justify-between">
-                        <div>건축</div>
-                        <div>₩ 42,480,000</div>
-                    </div>
-                    <div class="flex justify-between">
-                        <div>전기 통신 소방</div>
-                        <div>₩ 42,480,000</div>
-                    </div>
-                </div>
-                
-                <div>
-                    <div class="flex justify-between font-extrabold text-emerald-400">
-                        <div>MIN</div>
-                        <div>₩ 42,480,000</div>
+                        </div>
                     </div>
                 </div>
     
-                <div class="text-sm">
-                    <div class="flex justify-between font-bold">
-                        <div>Contract(MAX)</div>
-                        <div>₩ 42,480,000</div>
-                    </div>
-                    <div class="flex justify-between">
-                        <div>건축</div>
-                        <div>₩ 42,480,000</div>
-                    </div>
-                    <div class="flex justify-between">
-                        <div>전기 통신 소방</div>
-                        <div>₩ 42,480,000</div>
-                    </div>
-                </div>
-    
-                <div class="text-sm">
-                    <div class="flex justify-between font-bold">
-                        <div>Risk</div>
-                        <div>₩ 42,480,000</div>
-                    </div>
-                    <div class="flex justify-between">
-                        <div>날씨</div>
-                        <div>₩ 42,480,000</div>
-                    </div>
-                    <div class="flex justify-between">
-                        <div>도급 계약 지연</div>
-                        <div>₩ 42,480,000</div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <div class="flex justify-between text-emerald-600 font-extrabold">
-                            <div>MAX</div>
+                <div class="p-4 rounded-b-lg bg-gray-200 shadow-md ">
+                    <div class="flex flex-col gap-y-3 text-sm">
+                        <div class="flex justify-between font-semibold">
+                            <div>Support</div>
                             <div>₩ 42,480,000</div>
+                        </div>
+            
+                        <div>
+                            <div class="flex justify-between font-semibold">
+                                <div>Contract
+                                    <span class="rounded-md px-1
+                                        text-xs text-white bg-emerald-400">MIN</span>
+                                </div>
+                                <div>₩ 42,480,000</div>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>건축</div>
+                                <div>₩ 42,480,000</div>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>전기 통신 소방</div>
+                                <div>₩ 42,480,000</div>
+                            </div>
+                        </div>
+            
+                        <div>
+                            <div class="flex justify-between font-semibold">
+                                <div>Contract
+                                    <span class="rounded-md px-1
+                                        text-xs text-white bg-emerald-600">MAX</span>
+                                </div>
+                                <div>₩ 42,480,000</div>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>건축</div>
+                                <div>₩ 42,480,000</div>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>전기 통신 소방</div>
+                                <div>₩ 42,480,000</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between font-semibold">
+                                <div>Risk</div>
+                                <div>₩ 42,480,000</div>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>날씨</div>
+                                <div>₩ 42,480,000</div>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>도급 계약 지연</div>
+                                <div>₩ 42,480,000</div>
+                            </div>
+                        </div>
+
+                        <div class="font-semibold">
+                            <div class="flex justify-between text-emerald-400">
+                                <div>MIN</div>
+                                <div>₩ 642,480,000</div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-emerald-600">
+                                    <div>MAX</div>
+                                    <div>₩ 742,480,000</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--  -->
+        <div class="basis-72 h-screen p-3 bg-stone-300 ring-[0.5px] ring-stone-400 divide-y-[0.5px] divide-stone-400">
+            <div class="py-4">
+                <h3 class="font-semibold">Support</h3>
+                <div class="mt-1 flex justify-between items-end">
+                    <label class="ml-1 font-light text-xs">Amout</label>
+                    <div>
+                        <input type="text" class="px-1 h-5 text-xs text-right ring-[0.5px] ring-stone-400 rounded-sm">
+                        <span class="font-light text-xs">₩</span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-4">
+                <div class="flex items-center">
+                    <h3 class="font-semibold">Contract</h3>
+                    <button class="px-4 ml-2 bg-white ring-[0.5px] ring-stone-400 rounded-lg
+                        hover:bg-stone-100 active:bg-stone-300
+                        text-xs font-semibold">+</button>
+                </div>
+                <div class="mt-2">
+                    <input type="text" 
+                        class="px-1 h-5 w-[249px] text-xs ring-[0.5px] ring-stone-400 rounded-sm read-only:bg-stone-200"
+                        value="Elect"
+                        readonly>
+                    <div class="mt-1 flex justify-between items-end">
+                        <label class="ml-1 font-light text-xs">Max</label>
+                        <div>
+                            <input type="text" class="px-1 h-5 text-xs text-right ring-[0.5px] ring-stone-400 rounded-sm">
+                            <span class="font-light text-xs">₩</span>
+                        </div>
+                    </div>
+                    <div class="mt-1 flex justify-between items-end">
+                        <label class="ml-1 font-light text-xs">Min</label>
+                        <div>
+                            <input type="text" class="px-1 h-5 text-xs text-right ring-[0.5px] ring-stone-400 rounded-sm">
+                            <span class="font-light text-xs">₩</span>
                         </div>
                     </div>
                 </div>
                 
-    
+                <div class="mt-2">
+                    <input type="text" 
+                        class="px-1 h-5 w-[249px] text-xs ring-[0.5px] ring-stone-400 rounded-sm read-only:bg-stone-200"
+                        value="Construction"
+                        readonly>
+                    <div class="mt-1 flex justify-between items-end">
+                        <label class="ml-1 font-light text-xs">Max</label>
+                        <div>
+                            <input type="text" class="px-1 h-5 text-xs text-right ring-[0.5px] ring-stone-400 rounded-sm">
+                            <span class="font-light text-xs">%</span>
+                        </div>
+                        
+                    </div>
+                    <div class="mt-1 flex justify-between items-end">
+                        <label class="ml-1 font-light text-xs">Min</label>
+                        <div>
+                            <input type="text" class="px-1 h-5 text-xs text-right ring-[0.5px] ring-stone-400 rounded-sm">
+                            <span class="font-light text-xs">%</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="py-4">
+                <div class="flex items-center">
+                    <h3 class="font-semibold">Risk</h3>
+                    <button class="px-4 ml-2 bg-white ring-[0.5px] ring-stone-400 rounded-lg
+                        hover:bg-stone-100 active:bg-stone-300
+                        text-xs font-semibold">+</button>
+                </div>
+                <div class="mt-2">
+                    <input type="text"
+                        class="px-1 h-5 w-[249px] text-xs ring-[0.5px] ring-stone-400 rounded-sm"
+                        placeholder="Description of Risk">
+                    <div class="mt-2 mr-[15px] flex justify-between items-center">
+                        <label class="ml-1 font-light text-xs">Probability</label>
+                        <div class="flex">
+                            <input type="radio" name="probability-1" id="probability-low-1"
+                                class="peer/probability-low hidden"/>
+                            <label for="probability-low-1" 
+                                class="px-4 bg-white text-xs
+                                    peer-checked/probability-low:bg-lime-400
+                                    ring-[0.5px] ring-stone-400 rounded-l-lg">1</label>
+                            <input type="radio" name="probability-1" id="probability-med-1"
+                                class="peer/probability-med hidden"/>
+                            <label for="probability-med-1" 
+                                class="px-4 bg-white text-xs
+                                    peer-checked/probability-med:bg-orange-400
+                                    ring-[0.5px] ring-stone-400">2</label>
+                            <input type="radio" name="probability-1" id="probability-high-1"
+                                class="peer/probability-high hidden"/>
+                            <label for="probability-high-1" 
+                                class="px-4 bg-white text-xs
+                                    peer-checked/probability-high:bg-red-400
+                                    ring-[0.5px] ring-stone-400 rounded-r-lg">3</label>
+                        </div>
+                    </div>
+                    <div class="mt-2 mr-[15px] flex justify-between items-center">
+                        <label class="ml-1 font-light text-xs">Impact</label>
+                        <div class="flex">
+                            <input type="radio" name="impact-1" id="impact-low-1"
+                                class="peer/impact-low hidden"/>
+                            <label for="impact-low-1" 
+                                class="px-4 bg-white text-xs
+                                    peer-checked/impact-low:bg-lime-400
+                                    ring-[0.5px] ring-stone-400 rounded-l-lg">1</label>
+                            <input type="radio" name="impact-1" id="impact-med-1"
+                                class="peer/impact-med hidden"/>
+                            <label for="impact-med-1" 
+                                class="px-4 bg-white text-xs
+                                    peer-checked/impact-med:bg-orange-400
+                                    ring-[0.5px] ring-stone-400">2</label>
+                            <input type="radio" name="impact-1" id="impact-high-1"
+                                class="peer/impact-high hidden"/>
+                            <label for="impact-high-1" 
+                                class="px-4 bg-white text-xs
+                                    peer-checked/impact-high:bg-red-400
+                                    ring-[0.5px] ring-stone-400 rounded-r-lg">3</label>
+                        </div>
+                    </div>
+                    <div class="mt-1 flex justify-between items-center">
+                        <label class="ml-1 font-light text-xs">Max</label>
+                        <div>
+                            <input type="text" class="px-1 h-5 text-xs text-right ring-[0.5px] ring-stone-400 rounded-sm">
+                            <span class="font-light text-xs">₩</span>
+                        </div>
+                    </div>
+                    <div class="mt-1 flex justify-between items-center">
+                        <label class="ml-1 font-light text-xs">Min</label>
+                        <div>
+                            <input type="text" class="px-1 h-5 text-xs text-right ring-[0.5px] ring-stone-400 rounded-sm">
+                            <span class="font-light text-xs">₩</span>
+                        </div>
+                    </div>
+                    <div class="mt-1 flex justify-between items-center">
+                        <label class="ml-1 font-light text-xs">Risk Allowance</label>
+                        <div>
+                            <span class="text-xs">40,000,000</span>
+                            <span class="font-light text-xs">₩</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <input type="text" 
+                        class="px-1 h-5 w-[249px] text-xs ring-[0.5px] ring-stone-400 rounded-sm"
+                        placeholder="Description of Risk">
+                    <div class="mt-2 mr-[15px] flex justify-between items-center">
+                        <label class="ml-1 font-light text-xs">Probability</label>
+                        <div class="flex">
+                            <input type="radio" name="probability-2" id="probability-low-2"
+                                class="peer/probability-low hidden"/>
+                            <label for="probability-low-2" 
+                                class="px-4 bg-white text-xs
+                                    peer-checked/probability-low:bg-lime-400
+                                    ring-[0.5px] ring-stone-400 rounded-l-lg">1</label>
+                            <input type="radio" name="probability-2" id="probability-med-2"
+                                class="peer/probability-med hidden"/>
+                            <label for="probability-med-2" 
+                                class="px-4 bg-white text-xs
+                                    peer-checked/probability-med:bg-orange-400
+                                    ring-[0.5px] ring-stone-400">2</label>
+                            <input type="radio" name="probability-2" id="probability-high-2"
+                                class="peer/probability-high hidden"/>
+                            <label for="probability-high-2" 
+                                class="px-4 bg-white text-xs
+                                    peer-checked/probability-high:bg-red-400
+                                    ring-[0.5px] ring-stone-400 rounded-r-lg">3</label>
+                        </div>
+                    </div>
+                    <div class="mt-2 mr-[15px] flex justify-between items-center">
+                        <label class="ml-1 font-light text-xs">Impact</label>
+                        <div class="flex">
+                            <input type="radio" name="impact-2" id="impact-low-2"
+                                class="peer/impact-low hidden"/>
+                            <label for="impact-low-2" 
+                                class="px-4 bg-white text-xs
+                                    peer-checked/impact-low:bg-lime-400
+                                    ring-[0.5px] ring-stone-400 rounded-l-lg">1</label>
+                            <input type="radio" name="impact-2" id="impact-med-2"
+                                class="peer/impact-med hidden"/>
+                            <label for="impact-med-2" 
+                                class="px-4 bg-white text-xs
+                                    peer-checked/impact-med:bg-orange-400
+                                    ring-[0.5px] ring-stone-400">2</label>
+                            <input type="radio" name="impact-2" id="impact-high-2"
+                                class="peer/impact-high hidden"/>
+                            <label for="impact-high-2" 
+                                class="px-4 bg-white text-xs
+                                    peer-checked/impact-high:bg-red-400
+                                    ring-[0.5px] ring-stone-400 rounded-r-lg">3</label>
+                        </div>
+                    </div>
+                    <div class="mt-1 flex justify-between items-center">
+                        <label class="ml-1 font-light text-xs">Max</label>
+                        <div>
+                            <input type="text" class="px-1 h-5 text-xs text-right ring-[0.5px] ring-stone-400 rounded-sm">
+                            <span class="font-light text-xs">₩</span>
+                        </div>
+                    </div>
+                    <div class="mt-1 flex justify-between items-center">
+                        <label class="ml-1 font-light text-xs">Min</label>
+                        <div>
+                            <input type="text" class="px-1 h-5 text-xs text-right ring-[0.5px] ring-stone-400 rounded-sm">
+                            <span class="font-light text-xs">₩</span>
+                        </div>
+                    </div>
+                    <div class="mt-1 flex justify-between items-center">
+                        <label class="ml-1 font-light text-xs">Risk Allowance</label>
+                        <div>
+                            <span class="text-xs">40,000,000</span>
+                            <span class="font-light text-xs">₩</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-   
-    
 </body>
 </html>
